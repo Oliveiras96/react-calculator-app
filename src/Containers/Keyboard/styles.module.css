@@ -1,0 +1,82 @@
+.key0 { grid-area: key0;}
+.key1 { grid-area: key1;}
+.key2 { grid-area: key2;}
+.key3 { grid-area: key3;}
+.key4 { grid-area: key4;}
+.key5 { grid-area: key5;}
+.key6 { grid-area: key6;}
+.key7 { grid-area: key7;}
+.key8 { grid-area: key8;}
+.key9 { grid-area: key9;}
+.keyPlus { grid-area: keyPlus;}
+.keyMinus { grid-area: keyMinus;}
+.keyMulti { grid-area: keyMulti;}
+.keyDivision { grid-area: keyDivision;}
+.keyDel { grid-area: keyDel; }
+.keydot { grid-area: keyDot;}
+.keyReset { grid-area: keyReset;}
+.keyEqual { grid-area: keyEqual;}
+
+.keyDel, .keyReset {
+    background: var(--main-bg) !important; 
+    color: var(--text);
+}
+
+.keyEqual { 
+    background: var(--toggle-thumb) !important;
+    border-bottom: var(--toggle-shadow) !important;
+    color: var(--text);
+}
+
+.keyboardContainer {
+    background: var(--screen-bg);
+    color: var(--screen-bg);
+
+    margin: 0 auto 1rem;
+    padding: 0.5rem 0.25rem;
+    border-radius: 10px;
+}
+
+.keyobardWrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0.3rem 0.25rem;
+
+    display: grid;
+    grid-template-areas: 
+        'key7 key8 key9 keyDel'
+        'key4 key5 key6 keyPlus'
+        'key1 key2 key3 keyMinus'
+        'keyDot key0 keyDivision keyMulti'
+        'keyReset keyReset keyEqual keyEqual'
+    ;
+    gap: 0.3rem;
+}
+
+.keyboardkey {
+    min-width: 60px;
+    background: var(--text);
+    font-size: 0.9rem;
+    
+    padding: 0.25rem .2rem;
+    border: 0;
+    border-radius: 3px;
+    border-bottom: 4px solid var(--key-shadow);
+}
+
+.keyboardkey:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+@media(max-width: 375px) {
+    .keyboardContainer {
+        max-width: 300px;
+    }
+}
+
+@media(min-width: 376px) {
+    .keyboardContainer {
+        max-width: 500px;
+    }
+}

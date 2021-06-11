@@ -1,0 +1,27 @@
+.displayContainer {
+    margin: 1rem auto;
+    height: 100px;
+    border-radius: 10px;
+    
+    background: var(--screen-bg);
+    color: var(--text);
+
+    text-align: right;
+}
+
+.displayContainer > p {
+    padding-right: 0.25rem;
+    transform: translateY(90%);
+}
+
+@media (max-width: 375px) {
+    .displayContainer {
+        max-width: 300px;
+    }
+}
+
+@media (min-width: 376px) {
+    .displayContainer {
+        max-width: 500px;
+    }
+}
